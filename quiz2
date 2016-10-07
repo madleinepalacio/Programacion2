@@ -1,0 +1,22 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Main {
+   public static void main( String[] args ) throws IOException{
+       double centavos;
+       double euros;
+       double dolares;
+
+       BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+       System.out.println("Introduzca los centavos: ");
+       centavos = Double.parseDouble(br.readLine());
+
+       dolares = centavos / 100;
+       euros = dolares * 0.89;
+       System.out.printf( "Los dolares en euro son: %.2f",euros);
+       /**%.2f, variable**/
+
+   }
+}
